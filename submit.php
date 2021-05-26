@@ -1,8 +1,8 @@
 <?php
-    $firstName = $_POST['firstName'] ."<br />";
-    $lastName = $_POST['lastName'] ."<br />";
-    $email = $_POST['email'] ."<br />";
-    $story = $_POST['yourStory'] ."<br />";
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $story = $_POST['yourStory'];
     $servername = "localhost";
     $username = "root";
     $password = "root@fuint";
@@ -15,11 +15,9 @@
       die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO Persons (firstname, lastname, email, story)
-    VALUES ($firstName, $lastName, $email, $story)";
+    $sql = "INSERT INTO Persons (FirstName, Lastname, email, story) VALUES ('$firstName', '$lastName', '$email', '$story')";
 
     if ($conn->query($sql) === TRUE) {
-      echo "New record created successfully";
     } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
     }
