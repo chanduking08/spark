@@ -602,8 +602,10 @@ section {
   min-height: 238px;
 }
 
-#services .col-md-6, #portfolio .col-md-6 {
-  padding: 0 50px;
+@media (min-width: 1400px) {
+  #services .col-md-6, #portfolio .col-md-6 {
+    padding: 0 50px;
+  }
 }
 
 #services .title a {
@@ -1533,8 +1535,10 @@ section {
   color: #1780A5;
 }
 
-body h2, body #hero .intro-info h2 {
-  font-size: 98px;
+@media (min-width: 992px) {
+  body h2, body #hero .intro-info h2 {
+    font-size: 98px;
+  }
 }
 
 p {
